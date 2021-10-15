@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Dauphine SITN TP1</title>
+
+  <!--Importation du fichier contenant le code CSS-->
+  <link rel="stylesheet" href="style.css">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <!--Ajout de le Partie JS-->
+  <script>
+    function myFunction(pValue) {
+        document.getElementById("pId").value = pValue;
+    }
+   </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Ceci est un div pour les Menus de la page-->
+        <div class="topnav">
+            <ul>
+                <li>
+                    <a class="active" href="#">Menu Local</a>
+                </li>
+                <li>
+                    <a href="https://passeport.dauphine.fr/" target="_blank">Passeport Dauphine</a>
+                </li>
+            </ul>
+            
+        </div>
+
+        <!-- Ceci est un div pour le formulaire-->
+        <div class="dauphine">
+            <!--Ajout d'une image-->
+            <img src="logo.png" class="img-fluid" alt="Dauphine PSL" width="700" height="100">
+            
+            <form>
+                <!-- Ceci est un div pour la partie du Nom-->
+                <div class="div1">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">First Name</label>
+                        <div class="col-sm-12">
+                            <input type="text"  readonly class="form-control-plaintext" id="pId" name="Nom" value="Nom">
+                        </div>
+
+                        <label class="col-sm-4 col-form-label">Middle Name</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" placeholder="Middle Name">
+                        </div>
+
+                        <label class="col-sm-4 col-form-label">Last Name</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control"  placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <!-- Ceci est un div pour la partie Gender-->
+                
+                <div class="div1">
+                    <label>Gender :</label>
+                    Male
+                    <input type="radio">
+                    Female
+                    <input type="radio">
+                </div> 
+
+                <!-- Ceci est un div pour la partie Phone, Email, Contact-->
+                <div class="div1">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Phone</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="Phone">
+                        </div>
+
+                        <label class="col-sm-4 col-form-label emailLab">Email</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="Email">
+                        </div>
+                        
+                        <label  class="col-sm-4 col-form-label">Contact ?</label>
+                        <div class="col-sm-12">
+                            <input type="checkbox" name="Contact">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-lg-2">
+                    <!-- Ceci est un button de type submit pour envoi des données-->
+                        <button type="submit" class="btn btn-primary">
+                            Envoi
+                        </button>
+                    </div>
+            
+                    <div class="col-md-4 col-lg-2">
+                        <!-- Ceci est un button de type reset pour réintialiser des données-->
+                        <button type="reset" class="btn btn-warning">
+                            Réintialiser
+                        </button>
+                    </div>
+                    
+                    <div class="col-md-4 col-lg-2">
+                        <!-- Ceci est un button pour modifier du code JS avec une fonction-->
+                        <button type="button" class="btn btn-secondary" onclick="myFunction('Nom Changed')">
+                            Appel JavaScript
+                        </button>
+                    </div>
+                </div>          
+            </form>
+        </div>
+        
+        <!--Paragraphe-->
+        <!--<p>Ceci est le TP1 HTML</p>-->
+    </div>  
+</body>
+
+</html>
